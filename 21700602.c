@@ -27,7 +27,27 @@ int reverse_digits(int n){
 	return result;
 }
 
-
+char* binarized(int n){
+	char bin[MAX_SIZE];
+	char temp;
+	char* result;
+	int count=0;
+	int remainder=n;
+	while (n!=0){
+		remainder=n%2;
+		n /= 2;
+		bin[count] = remainder+'0';
+		count++;
+	}
+	bin[count]='\0';
+	for (int i=count-1; i>=count/2; i--){	       
+		temp=bin[i];
+		bin[i]=bin[count-1-i];
+		bin[count-1-i]=temp;
+	}
+	result=bin;
+	return result;
+}
 #if 0
 int main(){
 	char input[MAX_SIZE];
@@ -35,10 +55,11 @@ int main(){
 	fgets(input, sizeof(input), stdin);
  
 	int reverse = reverse_digits(atoi(input));
+	char* bin= binarized(atoi(input));
 
 	printf("reverse> %d\n", reverse);
-	
-	
+	printf("binary> %s\n", bin);	
+		
 	return 0;
 }
 #endif
