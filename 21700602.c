@@ -3,7 +3,6 @@
 #include "21700602.h"
 #define MAX_SIZE 2048
 
-
 int reverse_digits(int n){
 	int num[MAX_SIZE];
 	int result=0;
@@ -46,8 +45,15 @@ char* binarized(int n){
 		bin[count-1-i]=temp;
 	}
 	result=bin;
+	printf("binary>");
+	for(int i=0; i<count; i++){
+	printf("%c",bin[i]);
+
+}
+	printf("\n");
 	return result;
 }
+
 #if 0
 int main(){
 	char input[MAX_SIZE];

@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "21700416.h"
+#include <stdbool.h>
+#include "math.h"
 #define MAX_SIZE 2048
 
 int sort_digits(int n){
@@ -31,4 +33,15 @@ for (int i=0; i<count+1; i++){
 	result1+=number[i];
 }
 return result1;
+}
+
+_Bool isPrime(int n)
+{
+    if (n <= 1)
+        return false;
+      for (int i = 2; i < n; i++)
+        if (n % i == 0)
+            return false;
+
+    return true;
 }

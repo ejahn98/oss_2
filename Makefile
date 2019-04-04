@@ -1,5 +1,5 @@
 CC=gcc
-TARGET = Hi_exe
+TARGET = Hii_exe
 OBJECT = 21700602.o 21700416.o  main.o 
 
 
