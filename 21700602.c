@@ -26,7 +26,7 @@ int reverse_digits(int n){
 
 	return result;
 }
-
+  
 char* binarized(int n){
 	char bin[MAX_SIZE];
 	char temp;
